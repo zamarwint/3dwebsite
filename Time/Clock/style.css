@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+body {
+  box-sizing: border-box;
+  background-image: url("5665.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Space Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+}
+
+.text {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  text-wrap: wrap;
+  padding-top: 10px;
+  text-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+}
+
+.container {
+  display: grid;
+  grid-template: 5em 10em / repeat(3, 15em);
+  grid-template-areas: "heading1 heading2 heading3" "hours minutes seconds";
+  place-content: center;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 5px solid rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  box-shadow: 0 0 50px 1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.title {
+  color: white;
+  align-self: end;
+  text-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+}
+
+.title1 {
+  grid-area: heading1;
+}
+
+.title2 {
+  grid-area: heading2;
+}
+
+.title3 {
+  grid-area: heading3;
+}
+
+.box1 {
+  grid-area: hours;
+}
+
+.box2 {
+  grid-area: minutes;
+}
+
+.box3 {
+  grid-area: seconds;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3em;
+  height: 2em;
+  font-size: 50px;
+  background-color: white;
+  border: 5px solid lightyellow;
+  border-radius: 5%;
+  box-shadow: 0 0 50px 1px darkgray;
+  transition: transform 500ms ease;
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
+
+.copyright {
+  font-size: 15px;
+}
+
+.copyright:hover {
+  color: white;
+}
+
+.info {
+  width: 20em;
+  border: 5px solid rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 50px 1px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  transition: transform 500ms linear;
+}
+
+.info:hover {
+  transform: scale(1.1);
+}
+
+#meridian {
+  position: relative;
+  font-size: 2em;
+  text-align: center;
+  text-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template: auto / auto;
+    grid-template-areas: "heading1" "hours" "heading2" "minutes" "heading3" "seconds";
+  }
+
+  .info {
+    width: 75%;
+  }
+}

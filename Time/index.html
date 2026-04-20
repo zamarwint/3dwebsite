@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COUNTDOWN</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="clock2.png" type="image/x-icon" />
+    <script src="script.js" async defer></script>
+  </head>
+  <body>
+    <h1 class="welcome">Welcome to the the ZAMAR'S COUNTDOWN TIMER!</h1>
+    <h3 class="heading">
+      Type in numbers in the boxes below to configure your timer<br />
+      <i> NB: Place a zero (0) before one digit numbers for best results. </i
+      ><br />Press 'start' to begin.
+    </h3>
+    <div class="timer">
+      <h3 class="text1">HOURS</h3>
+      <h3 class="text2">MINUTES</h3>
+      <h3 class="text3">SECONDS</h3>
+      <input
+        type="number"
+        class="hour"
+        id="hour"
+        placeholder="00"
+        pattern="\d*"
+        max="99"
+      />
+      <input
+        type="number"
+        class="minute"
+        id="minute"
+        placeholder="00"
+        max="99"
+      />
+      <input
+        type="number"
+        class="second"
+        id="second"
+        placeholder="00"
+        max="99"
+      />
+    </div>
+    <div class="buttons">
+      <button class="start" id="start" onclick="start()">START</button>
+      <button class="reset" id="reset" onclick="reset()">RESET</button>
+      <button class="stop" id="stop" onclick="stop()">STOP</button>
+    </div>
+    <h5 class="foot">&copy; 2026. All rights reserved. Zamar Wint</h5>
+  </body>
+</html>

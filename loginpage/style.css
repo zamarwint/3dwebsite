@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "DM Mono", monospace;
+  font-weight: 300;
+  font-style: normal;
+  color: #fff;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.image-gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.layer-blur {
+  height: 0;
+  width: 30rem;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  box-shadow: 0 0 700px 15px #fff;
+  rotate: 30deg;
+  z-index: -1;
+}
+
+.container {
+  width: 35vw;
+  height: 70vh;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  background: linear-gradient(360deg, #262626 0%, black 100%);
+  backdrop-filter: blur(20px);
+  box-shadow: 5px 5px 0 0 rgba(255, 255, 255, 1);
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 4em;
+  font-weight: 550;
+}
+
+.container .input-box {
+  position: relative;
+}
+
+.input-box {
+  width: 100%;
+  height: 5em;
+  margin: 50px 0px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  font-size: 16px;
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box img {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.container .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: -15px 0 15px;
+}
+
+.remember-forgot .forgot {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 550;
+}
+
+.remember-forgot .forgot:hover {
+  text-decoration: underline;
+}
+
+.input-box input {
+  accent-color: #fff;
+  text-decoration: none;
+  color: #fff;
+}
+
+.input-box input::placeholder {
+  color: #fff;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.container .login {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  cursor: pointer;
+  color: #000;
+  font-size: 16px;
+  font-weight: 550;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+  transition: all 0.2s linear;
+}
+
+.container .login:hover {
+  background-color: #000;
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 3px 3px 0 0 rgba(255, 255, 255, 1);
+  transform: translate(-3px, -3px);
+}
+
+.register {
+  font-size: 14.5px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register p a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 550;
+}
+
+.register p a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE & SMALLER DEVICE RESPONSIVE */
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 80vw;
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 70vw;
+    height: 70vh;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 35vw;
+    height: 70vh;
+  }
+}
